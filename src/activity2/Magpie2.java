@@ -40,6 +40,9 @@ public class Magpie2
     {
       response = "Nobody is stupid, except you. (Burn)";
     }
+    else if (statement.indexOf("Komarinkski" >= 0)
+    {
+      response = "Sounds like a bad teacher";
     else if (statement.indexOf("no") >= 0)
     {
       response = "Why so negative?";
