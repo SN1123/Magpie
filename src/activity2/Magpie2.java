@@ -29,47 +29,56 @@ public class Magpie2
    */
   public String getResponse(String statement)
   {
-    String response = "";
-    if (statement.length() < 1)
+
+    if (statement.length() > 0)
     {
-      response = "Say something, please.";
-    }
-    else if (statement.indexOf("dumb") >= 0
-               || statement.indexOf("stupid") >= 0
-               || statement.indexOf("idiot") >= 0)
-    {
-      response = "Nobody is stupid, except you. (Burn)";
-    }
-    else if (statement.indexOf("Komarinkski" >= 0)
-    {
-      response = "Sounds like a bad teacher";
-    else if (statement.indexOf("no") >= 0)
-    {
-      response = "Why so negative?";
-    }
-    else if (statement.indexOf("mother") >= 0
-               || statement.indexOf("father") >= 0
-               || statement.indexOf("sister") >= 0
-               || statement.indexOf("brother") >= 0)
-    {
-      response = "Tell me more about your family.";
-    }
-    else if (statement.indexOf("cat") >= 0
-               || statement.indexOf("dog") >= 0)
-    {
-      response = "Tell me more about your pets.";
-    }
-    else if (statement.indexOf("Mr.") >= 0)
-    {
-      response = "He sounds like a good teacher";
-    }
-    else
-    {
-      response = getRandomResponse();
-    }
-    return response;
+      String response="";
+      if (statement.length() < 1)
+      {
+        response = "Say something, Please";
+      }
+      else if (statement.indexOf("dumb") >= 0
+                 || statement.indexOf("stupid") >= 0
+                 || statement.indexOf("idiot") >= 0)
+      {
+        response = "Nobody is stupid, except you. (Burn)";
+      }
+      else if (statement.indexOf("") >= 0
+                 || statement.indexOf("") >= 0)
+      {
+        response = "";
+      }
+      else if (statement.indexOf("yes") >= 0)
+      {
+        response = "That's Cool.";
+      }
+      else if (statement.indexOf("no") >= 0)
+      {
+        response = "Fine.";
+      }
+      else if (statement.indexOf("mother") >= 0
+                 || statement.indexOf("father") >= 0
+                 || statement.indexOf("sister") >= 0
+                 || statement.indexOf("brother") >= 0)
+      {
+        response = "Tell me more about your family.";
+      }
+      else if (statement.indexOf("cat") >= 0
+                 || statement.indexOf("dog") >= 0)
+      {
+        response = "Tell me more about your pets.";
+      }
+      else if (statement.indexOf("Mr.") >= 0)
+      {
+        response = "He sounds like a good teacher";
+      }
+      else
+      {
+        response = getRandomResponse();
+      }
   }
-  
+       return response;
+  }
   /**
    * Pick a default response to use if nothing else fits.
    * @return a non-committal string
